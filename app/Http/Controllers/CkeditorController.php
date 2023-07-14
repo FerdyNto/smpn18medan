@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class CkeditorController extends Controller
+{
+    public function upload_gambar_berita(Request $request)
+    {
+        if ($request->hasFile('upload')) {
+            //get filename with extension
+            $filenamewithextension = $request->file('upload')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('upload')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
+
+            //Upload File
+            // $request->file('upload')->storeAs('img/berita/', $filenametostore);
+            $request->file('upload')->move(public_path('img/berita/'), $filenametostore);
+
+            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+            $url = asset('img/berita/' . $filenametostore);
+            $msg = 'Image successfully uploaded';
+            $re = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+
+            // Render HTML output 
+            @header('Content-type: text/html; charset=utf-8');
+            echo $re;
+        }
+    }
+    public function upload_gambar_prestasi(Request $request)
+    {
+        if ($request->hasFile('upload')) {
+            //get filename with extension
+            $filenamewithextension = $request->file('upload')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('upload')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
+
+            //Upload File
+            // $request->file('upload')->storeAs('img/berita/', $filenametostore);
+            $request->file('upload')->move(public_path('img/prestasi/'), $filenametostore);
+
+            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+            $url = asset('img/prestasi/' . $filenametostore);
+            $msg = 'Image successfully uploaded';
+            $re = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+
+            // Render HTML output 
+            @header('Content-type: text/html; charset=utf-8');
+            echo $re;
+        }
+    }
+}

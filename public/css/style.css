@@ -1,0 +1,471 @@
+:root {
+    --green: #189b43;
+    --yellow: #f0ff42;
+    --blue: #054bcc;
+    --textgelap: #313131;
+    --yellow-background: #fdffec;
+    --green-background: #e7ffef;
+}
+* {
+    font-family: "Poppins", sans-serif;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--green);
+}
+img.img-merdeka-mengajar {
+    width: 1.8rem;
+}
+
+img.img-merdeka-belajar {
+    width: 100px;
+}
+
+.body {
+    background-color: var(--green-background);
+}
+
+a.nav-link.active {
+    color: #ffe100 !important;
+}
+
+a.nav-link:hover {
+    color: #ffe100 !important;
+}
+
+a.navbar-brand,
+a.nav-link {
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.shadow-nav {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* span.fw-bold {
+    font-size: medium;
+} */
+
+#hero {
+    height: 100vh;
+    overflow: hidden;
+}
+#hero .position-relative img.banner {
+    width: 100%;
+    aspect-ratio: 9/16;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#hero .position-relative div.position-absolute.text-white {
+    width: 90%;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+#hero .position-relative .position-absolute {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+#hero .position-relative .position-absolute img.img-logo-skolah-penggerak {
+    width: 8rem;
+}
+
+.position-absolute.text-white span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.position-absolute.text-white h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#berita,
+#komunitas,
+#prestasi {
+    padding: 2.5rem 0;
+}
+
+#berita .container .d-flex .card,
+#semua-berita .container .d-flex .col-12 .card,
+#semua-prestasi .container .d-flex .card {
+    width: 25rem;
+    /* margin-bottom: 1rem; */
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+div.card.guru {
+    width: 20rem;
+}
+div.card.guru img.card-img-top.img-top-guru {
+    aspect-ratio: 3/4;
+    width: 100%;
+}
+
+#komunitas .container .d-flex .card {
+    margin-bottom: 0;
+}
+
+.card .card-body div.card-text.fs-6 p,
+.card .card-body div.card-text.fs-5 p,
+div.paragraf p,
+div.card-text {
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--textgelap);
+}
+
+div.card-text.eks {
+    text-align: center;
+}
+
+.card-img-top,
+.img-prestasi {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#berita .container .d-flex .card .header-card,
+#semua-berita .container .d-flex .col-12 .card .header-card,
+#semua-prestasi .container .d-flex .card .header-card,
+#semua-berita .container .header-berita {
+    position: relative;
+}
+
+#berita .container .d-flex .card .header-card,
+#semua-berita .container .d-flex .col-12 .card .header-card,
+#semua-prestasi .container .d-flex .card .header-card {
+    overflow: hidden;
+}
+
+#berita .container .d-flex .card .header-card .tanggal,
+#semua-berita .container .d-flex .col-12 .card .header-card .tanggal,
+#semua-prestasi .container .d-flex .card .header-card .tanggal,
+#semua-berita .container .header-berita .tanggal {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur();
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+}
+
+.btn-lainnya a.btn {
+    outline: 2px solid black;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    display: none;
+    margin-top: 2rem;
+    /* font-size: 400; */
+}
+.btn-lainnya.mobile a.btn {
+    display: block;
+}
+
+#semua-berita,
+#semua-prestasi,
+#usaha {
+    padding: 4rem 0 3rem;
+}
+
+#semua-berita .container .container-breadcrumb,
+#semua-prestasi .container .container-breadcrumb,
+#komunitas .container .container-breadcrumb {
+    background-color: var(--yellow);
+    font-weight: 500;
+    font-size: small;
+    padding: 0.5rem 0.5rem;
+    margin: 0 0 2rem 0;
+}
+
+ol.breadcrumb {
+    margin: 0;
+}
+
+li.breadcrumb-item a {
+    color: var(--textgelap);
+    text-decoration-line: none;
+}
+
+li.breadcrumb-item.active {
+    color: var(--blue);
+}
+
+#semua-berita .container .d-flex .col-12 .row ul.nav li.nav-item a {
+    color: var(--blue);
+}
+
+div.border-bottom.mb-3 {
+    border: 2px solid;
+    border-color: var(--yellow);
+}
+
+form .input-group button.btn {
+    background-color: var(--blue);
+    color: white;
+    z-index: 0;
+}
+
+div.d-flex.flex-column.justify-content-between {
+    min-height: 100vh;
+}
+
+#semua-berita .container .header-berita img.berita {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.map {
+    width: 100%;
+}
+
+.card-img-top.guru {
+    aspect-ratio: 3/4;
+    /* height: 18rem; */
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}
+
+.container p.fs-6,
+div.card-body p.card-text {
+    color: var(--blue);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+div.card-body p.card-text.mapel {
+    font-size: 1.3rem;
+}
+
+footer {
+    background-color: var(--green);
+    padding: 5rem 0 0;
+    color: #ffffff;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    opacity: 0.2;
+}
+.text-usaha {
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+#usaha .container .d-flex .card.shadow {
+    width: 11rem;
+}
+@media screen and (min-width: 768px) {
+    #berita,
+    #komunitas,
+    #prestasi,
+    #kontak {
+        padding: 3rem 0;
+    }
+
+    #hero .position-relative .position-absolute {
+        top: 10%;
+    }
+    div.position-absolute.text-white {
+        width: 60%;
+    }
+
+    .position-absolute.text-white span {
+        font-size: 1.6rem;
+    }
+    .position-absolute.text-white h1 {
+        font-size: 3rem;
+    }
+
+    #berita .container .d-flex .card,
+    #semua-berita .container .d-flex .col-12 .card,
+    #semua-prestasi .container .d-flex .card {
+        width: 21rem;
+    }
+
+    #prestasi .container .d-flex .card,
+    #komunitas .container .d-flex .card {
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    #prestasi .container .d-flex .card .row .col-md-6 img,
+    #komunitas .container .d-flex .card .row .col-md-6 img {
+        height: 100%;
+    }
+    div.d-flex.flex-column.justify-content-between .header {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .map {
+        height: 20rem;
+    }
+
+    #kontak .container .row .col-12 p {
+        margin-bottom: 2rem;
+        font-size: larger;
+    }
+    #usaha .container .d-flex .card.shadow {
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    img.img-merdeka-mengajar {
+        width: 30px;
+    }
+    img.img-merdeka-belajar {
+        width: 70px;
+    }
+
+    header nav div.container-fluid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #hero .position-relative div.position-absolute.text-white {
+        top: 50%;
+        left: 3rem;
+        transform: translateY(-50%);
+    }
+    #hero .position-relative .position-absolute {
+        right: 5%;
+        top: 13%;
+        /* transform: translateX(0); */
+    }
+    #hero .position-relative .position-absolute img.img-logo-skolah-penggerak {
+        width: 15rem;
+    }
+
+    a.navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar.navbar-expand-lg {
+        padding: 0;
+    }
+    #berita .container .d-flex .card,
+    #semua-berita .container .d-flex .col-12 .card,
+    #semua-prestasi .container .d-flex .card {
+        width: 23rem;
+    }
+
+    /* header {
+        padding: 0.5rem 0;
+    } */
+
+    .btn-lainnya a.btn {
+        display: inline;
+    }
+
+    .btn-lainnya.mobile a.btn {
+        display: none;
+    }
+    #berita,
+    #komunitas,
+    #prestasi,
+    #kontak {
+        padding: 6rem 0;
+    }
+
+    #berita .container .d-flex .card:hover .card-img-top,
+    #semua-berita .container .d-flex .col-12 .card:hover .card-img-top,
+    #semua-prestasi .container .d-flex .card:hover .card-img-top {
+        transform: scale(1.2);
+    }
+
+    .position-absolute.text-white h1 {
+        font-size: 3.2rem;
+    }
+    div.position-absolute.text-white {
+        width: fit-content;
+    }
+
+    #semua-berita,
+    #semua-prestasi,
+    #usaha {
+        padding: 8rem 0 3rem;
+    }
+
+    #semua-berita .container .container-breadcrumb,
+    #semua-prestasi .container .container-breadcrumb,
+    #komunitas .container .container-breadcrumb {
+        font-size: medium;
+        padding: 0.7rem 0.7rem;
+    }
+
+    /* Detail Berita Dashboard */
+    .img-berita-b {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .position-absolute.text-white h1 {
+        font-size: 5rem;
+    }
+
+    .map {
+        height: 20rem;
+    }
+
+    #kontak .container .row .col-12 p {
+        font-size: 28px;
+        margin-bottom: 3rem;
+    }
+}
