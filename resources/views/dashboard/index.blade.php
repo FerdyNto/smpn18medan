@@ -64,4 +64,30 @@
             </div>
         </div>
     </div>
+
+    <div class="mt-5">
+        <h3 class="mb-3">Penanggung Jawab & Pengelola</h3>
+
+        @foreach ($users as $user)
+            <div class="card w-100 mb-3 border-0">
+                <div class="d-flex">
+                    @if (!$user->gambar)
+                        <img src="{{ asset('img/foto profil.jpg') }}" alt="{{ $e->nama_user }}"
+                            class="img-thumbnail rounded-circle" width="100px">
+                    @else
+                        <img src="{{ asset('img/user') . '/' . $user->gambar }}" alt="{{ $user->nama_user }}"
+                            class="img-thumbnail rounded-circle" width="100px">
+                    @endif
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $user->nama_user }}<span>( {{ $user->username }} )</span></h5>
+                        <p class="card-text">{{ $user->lvl }}</p>
+                    </div>
+                </div>
+
+            </div>
+        @endforeach
+
+    </div>
 @endsection
