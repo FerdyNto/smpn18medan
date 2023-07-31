@@ -72,7 +72,7 @@
             <div class="card w-100 mb-3 border-0">
                 <div class="d-flex">
                     @if (!$user->gambar)
-                        <img src="{{ asset('img/foto profil.jpg') }}" alt="{{ $e->nama_user }}"
+                        <img src="{{ asset('img/foto profil.jpg') }}" alt="{{ $user->nama_user }}"
                             class="img-thumbnail rounded-circle" width="100px">
                     @else
                         <img src="{{ asset('img/user') . '/' . $user->gambar }}" alt="{{ $user->nama_user }}"
